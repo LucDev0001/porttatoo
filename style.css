@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+/* Estilo para o cabeçalho */
+header h1 {
+  font-family: "Lobster", cursive; /* Define a fonte como Lobster */
+  font-size: 36px; /* Tamanho da fonte */
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os ícones das redes sociais */
+.contact-btns img {
+    width: 100px; /* Define a largura dos ícones */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+    margin: 0 10px; /* Adiciona um espaçamento entre os ícones */
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Estilo para galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Distribui as imagens em colunas responsivas */
+  grid-gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adiciona um pequeno arredondamento às bordas das imagens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil às imagens */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse sobre as imagens */
+}
+
+.gallery img:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse sobre ela */
+}
+
+.contact-btns {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-btns a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+ 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Estilo para conteúdo principal */
+.main-content {
+  display: none; /* Oculta o conteúdo principal até que a tela de carregamento termine */
+}
+
+/* Estilo para tela de carregamento */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilo para a foto do tatuador e o texto */
+.tattoo-artist-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0; /* Inicialmente oculta a foto do tatuador */
+  animation: fadeInFromLeft 1s ease forwards; /* Adiciona a animação para fazer a foto do tatuador aparecer */
+}
+
+.tattoo-artist {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1s ease forwards; /* Adiciona a animação para fazer a foto do tatuador aparecer */
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  animation: slideInFromLeft 1s ease forwards; /* Adiciona a animação para fazer a frase aparecer */
+}
+
+/* Animação para fazer a foto do tatuador e a frase aparecerem */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para fazer a foto do tatuador e a frase aparecerem da esquerda para a direita */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
